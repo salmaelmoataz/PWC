@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwc-app
+  labels:
+    app: pwc-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pwc-app
+  template:
+    metadata:
+      labels:
+        app: pwc-app
+    spec:
+      containers:
+      - name: pwc-container
+        image: 408355232675.dkr.ecr.us-east-1.amazonaws.com/pwc-eks:latest
+        ports:
+        - containerPort: 5000
