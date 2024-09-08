@@ -14,5 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Run the application using gunicorn
-CMD ["gunicorn","run:app", "-b", "0.0.0.0:5000", "-w", "4"]
-#CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["gunicorn","run:app", "-b", "0.0.0.0:5000", "-w", "1"]
